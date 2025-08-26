@@ -26,10 +26,11 @@ struct ContentView: View {
         let beginImage = CIImage(image: inputImage)
         
         let context = CIContext()
-        let currentFilter = CIFilter.crystallize()
+        let currentFilter = CIFilter.twirlDistortion()
         
         currentFilter.inputImage = beginImage
-        currentFilter.radius = 3
+        currentFilter.radius = 50
+        currentFilter.center = CGPoint(x: inputImage.size.width / 2, y: inputImage.size.height / 2)
         
         guard let outputImage = currentFilter.outputImage else { return }
         guard let cgImage = context.createCGImage(outputImage, from: outputImage.extent) else { return }
