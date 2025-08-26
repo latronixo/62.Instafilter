@@ -16,8 +16,8 @@ struct ContentView: View {
                 .blur(radius: blurAmount)
             Slider(value: $blurAmount, in: 0...20)
         }
-        .onChange(of: blurAmount) { oldValue, newValue in
-            print("New value is \(newValue)")
+        .onChange(of: blurAmount) { 
+            print("Blur changed")
         }
         .padding()
     }
