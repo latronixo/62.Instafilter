@@ -41,6 +41,7 @@ struct ContentView: View {
                 HStack {
                     Text("Intensity")
                     Slider(value: $filterIntensity)
+                        .onChange(of: filterIntensity, applyProcessing)
                 }
                 
                 HStack {
@@ -67,7 +68,7 @@ struct ContentView: View {
             
             let beginImage = CIImage(image: inputImage)
             currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
-            applyProcessing() 
+            applyProcessing()
         }
     }
     
