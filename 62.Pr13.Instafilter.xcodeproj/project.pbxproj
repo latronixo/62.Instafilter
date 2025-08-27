@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		CEC555D62E5DD6900018281A /* 62.Instafilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 62.Instafilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC555D62E5DD6900018281A /* 62.Pr13.Instafilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 62.Pr13.Instafilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		CEC555D82E5DD6900018281A /* 62.Instafilter */ = {
+		CEC555D82E5DD6900018281A /* 62.Pr13.Instafilter */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = 62.Instafilter;
+			path = 62.Pr13.Instafilter;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		CEC555CD2E5DD6900018281A = {
 			isa = PBXGroup;
 			children = (
-				CEC555D82E5DD6900018281A /* 62.Instafilter */,
+				CEC555D82E5DD6900018281A /* 62.Pr13.Instafilter */,
 				CEC555D72E5DD6900018281A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +40,7 @@
 		CEC555D72E5DD6900018281A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CEC555D62E5DD6900018281A /* 62.Instafilter.app */,
+				CEC555D62E5DD6900018281A /* 62.Pr13.Instafilter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CEC555D52E5DD6900018281A /* 62.Instafilter */ = {
+		CEC555D52E5DD6900018281A /* 62.Pr13.Instafilter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEC555E12E5DD6920018281A /* Build configuration list for PBXNativeTarget "62.Instafilter" */;
+			buildConfigurationList = CEC555E12E5DD6920018281A /* Build configuration list for PBXNativeTarget "62.Pr13.Instafilter" */;
 			buildPhases = (
 				CEC555D22E5DD6900018281A /* Sources */,
 				CEC555D32E5DD6900018281A /* Frameworks */,
@@ -61,13 +61,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				CEC555D82E5DD6900018281A /* 62.Instafilter */,
+				CEC555D82E5DD6900018281A /* 62.Pr13.Instafilter */,
 			);
-			name = 62.Instafilter;
+			name = 62.Pr13.Instafilter;
 			packageProductDependencies = (
 			);
 			productName = 62.Instafilter;
-			productReference = CEC555D62E5DD6900018281A /* 62.Instafilter.app */;
+			productReference = CEC555D62E5DD6900018281A /* 62.Pr13.Instafilter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CEC555D12E5DD6900018281A /* Build configuration list for PBXProject "62.Instafilter" */;
+			buildConfigurationList = CEC555D12E5DD6900018281A /* Build configuration list for PBXProject "62.Pr13.Instafilter" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CEC555D52E5DD6900018281A /* 62.Instafilter */,
+				CEC555D52E5DD6900018281A /* 62.Pr13.Instafilter */,
 			);
 		};
 /* End PBXProject section */
@@ -305,7 +305,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CEC555D12E5DD6900018281A /* Build configuration list for PBXProject "62.Instafilter" */ = {
+		CEC555D12E5DD6900018281A /* Build configuration list for PBXProject "62.Pr13.Instafilter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEC555DF2E5DD6920018281A /* Debug */,
@@ -314,7 +314,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEC555E12E5DD6920018281A /* Build configuration list for PBXNativeTarget "62.Instafilter" */ = {
+		CEC555E12E5DD6920018281A /* Build configuration list for PBXNativeTarget "62.Pr13.Instafilter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEC555E22E5DD6920018281A /* Debug */,
