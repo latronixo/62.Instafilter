@@ -58,7 +58,7 @@ struct ContentView: View {
             .navigationTitle("Instafilter")
             .confirmationDialog("Select a filter", isPresented: $showingFilters) {
                 Button("Crystallize") { setFilter(CIFilter.crystallize() )}         //кристаллизация
-                Button("Edges") { setFilter(CIFilter.edges() )}                     //
+                Button("Edges") { setFilter(CIFilter.edges() )}                     //границы
                 Button("Gaussian Blur") { setFilter(CIFilter.gaussianBlur() )}      //размытие по Гауссу
                 Button("Pixellate") { setFilter(CIFilter.pixellate() )}             //пикселлизация
                 Button("Sepia Tone") { setFilter(CIFilter.sepiaTone() )}            //оттенок сепия
@@ -85,7 +85,14 @@ struct ContentView: View {
     }
     
     func applyProcessing () {
-        currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey)
+        let inputKeys = currentFilter.inputKeys
+        
+        if inputKeys.contains(kCIInputIntensityKey) {
+            currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey) }
+        if inputKeys.contains(kCIInputRadiusKey) {
+            currentFilter.setValue(filterIntensity * 200, forKey: kCIInputRadiusKey) }
+        if inputKeys.contains(kCIInputScaleKey) {
+            currentFilter.setValue(filterIntensity * 10, forKey: kCIInputScaleKey) }
         
         guard let outputImage = currentFilter.outputImage else { return }
         guard let cgImage = context.createCGImage(outputImage, from: outputImage.extent) else { return }
