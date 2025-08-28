@@ -89,6 +89,9 @@ struct ContentView: View {
                 Button("Sepia Tone") { setFilter(CIFilter.sepiaTone() )}            //оттенок сепия
                 Button("Unsharp Mask") { setFilter(CIFilter.unsharpMask() )}        //нечеткая маска
                 Button("Vignette") { setFilter(CIFilter.vignette() )}               //виньетка
+                Button("BumpDistortion") { setFilter(CIFilter.bumpDistortion() )}               //виньетка
+                Button("BumpDistortionLinear") { setFilter(CIFilter.bumpDistortionLinear() )}               //виньетка
+                Button("circularWrap") { setFilter(CIFilter.circularWrap() )}               //виньетка
                 Button("Cancel", role: .cancel) { }
             }
         }
