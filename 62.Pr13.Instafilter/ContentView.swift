@@ -16,6 +16,7 @@ struct ContentView: View {
     @State private var filterIntensity = 0.5
     @State private var selectedItem: PhotosPickerItem?
     @State private var showingFilters = false
+    @State private var imageDidLoaded = false
     
     @AppStorage("filterCount") var filterCount = 0
     @Environment(\.requestReview) var requestReview
@@ -48,10 +49,12 @@ struct ContentView: View {
                     Text("Intensity")
                     Slider(value: $filterIntensity)
                         .onChange(of: filterIntensity, applyProcessing)
+                        .disabled(!imageDidLoaded)
                 }
                 
                 HStack {
                     Button("Change Filter", action: changeFilter)
+                        .disabled(!imageDidLoaded)
                     
                     Spacer()
                     
@@ -81,8 +84,12 @@ struct ContentView: View {
     
     func loadImage() {
         Task {
-            guard let imageData = try await selectedItem?.loadTransferable(type: Data.self) else { return }
-            guard let inputImage = UIImage(data: imageData) else { return }
+            guard let imageData = try await selectedItem?.loadTransferable(type: Data.self), let inputImage = UIImage(data: imageData) else {
+                imageDidLoaded = false
+                return
+            }
+            
+            imageDidLoaded = true
             
             let beginImage = CIImage(image: inputImage)
             currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
